@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "jira2simplicate"
 version = "0.2.0"
-description = "Synchronizes hours booked in Jira with Simplicate
+description = "Synchronizes hours booked in Jira with Simplicate"
 readme = "README.md"
 authors = [{ name = "HP Harmsen", email = "hph@oberon.nl" }]
 license = { file = "LICENSE" }
