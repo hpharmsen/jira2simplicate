@@ -6,10 +6,11 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 class Jira:
-    def __init__(self):
-        server = os.environ['JIRA_SERVER']
-        token = os.environ['JIRA_API_TOKEN']
-        email = os.environ['JIRA_API_EMAIL']
+    def __init__(self, server=None, token=None, email=None):
+        if not server:
+            server = os.environ['JIRA_SERVER']
+            token = os.environ['JIRA_API_TOKEN']
+            email = os.environ['JIRA_API_EMAIL']
 
         self.auth = HTTPBasicAuth(email, token)
         self.headers = {"Accept": "application/json"}
